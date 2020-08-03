@@ -9,6 +9,8 @@ main {
 
 .header {
   grid-area: header;
+  background-color: #587769;
+
 }
 
 .article {
@@ -26,17 +28,21 @@ main {
   grid-area: footer;
 }
 
-nav {
-  display: flex;
-  align-content: space-around;
-  justify-content: space-between;
-  background-color: #587769;
-  padding: 16px;
-}
 
 .navigation__link {
   color: #aecbbd;
   text-decoration: none;
+    display: block;
+    background-color: #587769;
+    padding: 5px;
+    margin: 0 0 5px;
+}
+
+.navigation {
+    display: block;
+    background-color: #587769;
+    padding: 5px;
+    margin: 0 0 5px;
 }
 
 h1 {
@@ -55,7 +61,7 @@ footer {
   color: #aecbbd;
 }
 
-@media screen and (max-width: 599px) {
+@media (max-width: 599px) {
 
   main {
     display: grid;
@@ -65,11 +71,40 @@ footer {
       "aside"
       "footer";
     grid-template-columns: 1fr;
+    margin: 60px 0 auto;
   }
+
+  .navigation {
+    /* display: block;
+    background-color: #587769;
+    padding: 5px;
+    margin: 0 0 5px; */
+    display: none;
+
+  }
+
+  header {
+    min-height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+  }
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.navigation--open {
+    display: block;
+}
 }
 
 
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
+
  
   main {
     display: grid;
@@ -78,7 +113,19 @@ footer {
       "article . aside"
       "footer footer footer";
     grid-template-columns: 200px 64px 1fr;
+    
 
+}
 
+.navigation {
+    display: flex;
+    align-content: space-around;
+    justify-content: space-between;
+    background-color: #587769;
+    padding: 16px;
   }
+
+.hamburger {
+    display: none;
+}
 }
