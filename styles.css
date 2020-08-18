@@ -36,6 +36,7 @@ main {
     background-color: #587769;
     padding: 5px;
     margin: 0 0 5px;
+    
 }
 
 .navigation {
@@ -45,13 +46,18 @@ main {
     margin: 0 0 5px;
 }
 
-h1 {
+h1
+{
   color: #587769;
+
 }
 
 h2 {
   color: #618374;
+
 }
+
+h2::before {content: 'Hi'}
 
 p {
   color: #6b9080;
@@ -75,12 +81,7 @@ footer {
   }
 
   .navigation {
-    /* display: block;
-    background-color: #587769;
-    padding: 5px;
-    margin: 0 0 5px; */
     display: none;
-
   }
 
   header {
@@ -129,3 +130,4 @@ footer {
     display: none;
 }
 }
+
